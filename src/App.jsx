@@ -1,45 +1,23 @@
-import { useState } from "react";
-import panda from "./assets/Panda.png";
-import babyPanda from "./assets/Baby Panda.png";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import Navbar from "./components/Navbar";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <h1>WORK IN PROGRESS</h1>
-      <div>
-        <p>
-          Hi! I'm Shermaine and this is my portfolio site. Pardon me but it is
-          still under development.
-        </p>
-        <p>⬇️⬇️⬇️ Meanwhile, visit my GitHub! ⬇️⬇️⬇️</p>
-        <a href="https://github.com/koyostar" target="_blank">
-          <img src={panda} className="panda" alt="Go to my github" />
-        </a>
-        <a href="https://github.com/koyostar/thePandaGame" target="_blank">
-          <img src={babyPanda} className="babypanda" alt="my first game" />
-        </a>
-        <a href="https://github.com/koyostar/travel-buddy" target="_blank">
-          <img src={babyPanda} className="babypanda" alt="travel planner app" />
-        </a>
-        <a href="https://github.com/koyostar/DDNoMore_FE" target="_blank">
-          <img
-            src={babyPanda}
-            className="babypanda"
-            alt="task management app"
-          />
-        </a>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
       </div>
-      <div className="card">
-        <p>OR</p>
-        <a href="mailto:shermaine.lsh@gmail.com?subject=Hi%20Shermaine&body=Hi%20Shermaine,%0D%0A%0D%0A">
-          <button>Send me an email</button>
-        </a>
-      </div>
-    </>
+    </Router>
   );
 }
-
-export default App;
