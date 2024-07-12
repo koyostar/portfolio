@@ -17,3 +17,37 @@ $dark: black !default;
     "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selfie-img {
+  width: 40%;
+}
+
+.intro {
+  font-family: "Caveat", cursive, serif;
+  font-weight: 700;
+}
+
+.highlight {
+  background-color: rgb(255, 255, 135);
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+.highlight2 {
+  background-color: rgb(135, 255, 243);
+  margin: 0 5px;
+  padding: 0 5px;
+}

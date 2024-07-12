@@ -33,7 +33,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="d-none d-lg-flex ms-auto">
-            <ul className="navbar-nav fs-3 fw-semibold flex-row">
+            <ul className="navbar-nav fs-4 fw-semibold flex-row">
               <li className="nav-item  mx-3">
                 <Link className="nav-link" to="/">
                   Home
@@ -47,11 +47,6 @@ export default function Navbar() {
               <li className="nav-item  mx-3">
                 <Link className="nav-link" to="/portfolio">
                   Portfolio
-                </Link>
-              </li>
-              <li className="nav-item  mx-3">
-                <Link className="nav-link" to="/contact">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -96,14 +91,6 @@ export default function Navbar() {
                 onClick={() => handleLinkClick("/portfolio")}
               >
                 Portfolio
-              </button>
-            </li>
-            <li className="nav-item px-2 py-2">
-              <button
-                className="nav-link btn"
-                onClick={() => handleLinkClick("/contact")}
-              >
-                Contact
               </button>
             </li>
           </ul>

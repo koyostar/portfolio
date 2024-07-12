@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
-export default function Contact() {
+export default function ContactForm({ handleClose }) {
   const form = useRef();
   const {
     register,
@@ -28,6 +28,7 @@ export default function Contact() {
           setShowToast(false);
         }, 10000);
         reset();
+        handleClose();
       },
       (error) => {
         console.log("FAILED...", error.text);
@@ -41,33 +42,32 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Contact Me</h2>
+    <div className="container ">
       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-        <div className="mb-3">
-          <label htmlFor="sender_name" className="form-label">
-            Name
-          </label>
+        <div className="form-floating mb-3">
           <input
             type="text"
             className={`form-control ${errors.sender_name ? "is-invalid" : ""}`}
             id="sender_name"
+            placeholder="Name"
             {...register("sender_name", { required: "Name is required" })}
           />
+          <label htmlFor="sender_name" className="form-label">
+            Name
+          </label>
+
           {errors.sender_name && (
             <div className="invalid-feedback">{errors.sender_name.message}</div>
           )}
         </div>
-        <div className="mb-3">
-          <label htmlFor="sender_email" className="form-label">
-            Email
-          </label>
+        <div className="form-floating mb-3">
           <input
             type="email"
             className={`form-control ${
               errors.sender_email ? "is-invalid" : ""
             }`}
             id="sender_email"
+            placeholder="name@example.com"
             {...register("sender_email", {
               required: "Email is required",
               pattern: {
@@ -76,27 +76,34 @@ export default function Contact() {
               },
             })}
           />
+          <label htmlFor="sender_email" className="form-label">
+            Email
+          </label>
+
           {errors.sender_email && (
             <div className="invalid-feedback">
               {errors.sender_email.message}
             </div>
           )}
         </div>
-        <div className="mb-3">
-          <label htmlFor="message" className="form-label">
-            Message
-          </label>
+        <div className="form-floating mb-3">
           <textarea
-            className={`form-control ${errors.message ? "is-invalid" : ""}`}
+            className={`form-control h-25 ${
+              errors.message ? "is-invalid" : ""
+            }`}
             id="message"
+            placeholder="Enter message"
             rows="4"
             {...register("message", { required: "Message is required" })}
           ></textarea>
+          <label htmlFor="message" className="form-label">
+            Message
+          </label>
           {errors.message && (
             <div className="invalid-feedback">{errors.message.message}</div>
           )}
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary m-3">
           Send
         </button>
       </form>
