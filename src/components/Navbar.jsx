@@ -18,11 +18,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark sticky-top">
-        <div className="container-fluid">
-          <Link className="navbar-brand fs-2 fw-bold ms-3" to="/">
+      <nav className="navbar sticky-top bg-primary">
+        <div className="container-fluid justify-content-end">
+          {/* <Link
+            className="navbar-brand text-secondary fs-2 fw-bold ms-3"
+            to="/"
+          >
             Shermaine's Portfolio
-          </Link>
+          </Link> */}
           <button
             className="navbar-toggler d-lg-none"
             type="button"
@@ -33,23 +36,38 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="d-none d-lg-flex ms-auto">
-            <ul className="navbar-nav fs-4 fw-semibold flex-row">
-              <li className="nav-item  mx-3">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item  mx-3">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item  mx-3">
-                <Link className="nav-link" to="/portfolio">
-                  Portfolio
-                </Link>
-              </li>
-            </ul>
+            <div className="navbar-nav fs-2 fw-semibold flex-row align-center">
+              <Link
+                className={`nav-link mx-4 p-0 ${
+                  location.pathname === "/"
+                    ? "text-danger text-decoration-underline"
+                    : ""
+                }`}
+                to="/"
+              >
+                Home
+              </Link>
+              <Link
+                className={`nav-link mx-4 p-0 ${
+                  location.pathname === "/about"
+                    ? "text-danger text-decoration-underline"
+                    : ""
+                }`}
+                to="/about"
+              >
+                About
+              </Link>
+              <Link
+                className={`nav-link mx-4 mx-3 p-0 ${
+                  location.pathname === "/portfolio"
+                    ? "text-danger text-decoration-underline"
+                    : ""
+                }`}
+                to="/portfolio"
+              >
+                Portfolio
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -63,7 +81,7 @@ export default function Navbar() {
       >
         <div className="offcanvas-header pb-0">
           <button
-            className="nav-link btn px-2"
+            className="nav-link btn px-3 fs-1"
             onClick={() => handleLinkClick("/")}
           >
             Home
@@ -75,7 +93,7 @@ export default function Navbar() {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
+        <div className="offcanvas-body fs-1">
           <ul className="navbar-nav justify-content-end flex-grow-1">
             <li className="nav-item px-2 py-2">
               <button

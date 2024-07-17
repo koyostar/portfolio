@@ -42,7 +42,7 @@ export default function ContactForm({ handleClose }) {
   };
 
   return (
-    <div className="container ">
+    <div className="container">
       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
         <div className="form-floating mb-3">
           <input
@@ -103,8 +103,8 @@ export default function ContactForm({ handleClose }) {
             <div className="invalid-feedback">{errors.message.message}</div>
           )}
         </div>
-        <button type="submit" className="btn btn-primary m-3">
-          Send
+        <button type="submit" className="btn btn-dark text-primary m-3">
+          SEND
         </button>
       </form>
       <div

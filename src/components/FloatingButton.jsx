@@ -6,11 +6,11 @@ export default function FloatingButton() {
     <>
       <button
         type="button"
-        className="btn btn-primary fixed-bottom fs-3"
+        className="btn btn-primary text-secondary fixed-bottom fs-2 fw-bold py-3 "
         data-bs-toggle="modal"
         data-bs-target="#contactModal"
       >
-        Contact Me
+        CONTACT ME
       </button>
 
       <div
@@ -20,8 +20,8 @@ export default function FloatingButton() {
         aria-labelledby="contactModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
+        <div className="modal-dialog modal-dialog-centered ">
+          <div className="modal-content  bg-light">
             <div className="modal-header">
               <h5 className="modal-title fs-3" id="contactModalLabel">
                 Contact Me
