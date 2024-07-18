@@ -55,7 +55,7 @@ export default function Navbar() {
                 }`}
                 to="/about"
               >
-                About
+                About Me
               </Link>
               <Link
                 className={`nav-link mx-4 mx-3 p-0 ${
