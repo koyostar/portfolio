@@ -8,9 +8,6 @@
   scroll-snap-type: x mandatory;
 }
 
-/* .about-container {
-  height: 100vh;
-} */
 .carousel-item {
   scroll-snap-align: start;
   flex: 0 0 100%;
