@@ -1,5 +1,6 @@
 import React from "react";
 import girlImg from "../assets/CodingGirl.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -39,19 +40,19 @@ export default function Home() {
           </p>
           <p className="text-center fs-2">
             Learn more about my
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="text-uppercase bg-danger text-light mx-2 px-2"
             >
               experiences
-            </a>
+            </Link>
             and
-            <a
-              href="/portfolio"
-              className="text-uppercase bg-danger text-light  mx-2 px-2"
+            <Link
+              to="/portfolio"
+              className="text-uppercase bg-danger text-light mx-2 px-2"
             >
               works
-            </a>
+            </Link>
             .
           </p>
         </div>
