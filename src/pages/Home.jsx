@@ -8,14 +8,15 @@ export default function Home() {
       <div>
         <h2 className="intro text-center fs-1 mt-5">HI! I'M SHERMAINE LIM</h2>
         <p className="text-center fs-2 fw-bold">
-          A
+          Merging
           <span className="text-uppercase bg-warning mx-2 px-2">
-            content creator
+            creative skills
           </span>
-          and an aspiring
+          with
           <span className="text-uppercase bg-warning mx-2 px-2">
-            software developer.
+            tech aspirations
           </span>
+          for a dynamic digital future.
         </p>
       </div>
       <div className="quote-container">
