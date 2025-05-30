@@ -27,12 +27,6 @@ export default function Outreach() {
         </p>
       </div>
       <div className="card-container d-flex mt-5">
-        <a
-          href="https://www.zbschools.sg/scratchcard_luckydraw"
-          className="text-decoration-none"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <div className="card mx-4 border-0">
             <img
               src={scratchcard}
@@ -61,15 +55,8 @@ export default function Outreach() {
             </div>
           </div>
           <h5 className="card-title text-dark fs-3">Scratchcard Giveaway</h5>
-        </a>
       </div>
       <div className="card-container d-flex mt-5">
-        <a
-          href="https://www.zbschools.sg/wizarding101"
-          className="text-decoration-none"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <div className="card mx-4 border-0">
             <img src={wizarding} className="card-img" alt="wizarding101" />
             <div className="card-img-overlay card-text">
@@ -93,15 +80,8 @@ export default function Outreach() {
             </div>
           </div>
           <h5 className="card-title text-dark fs-3">Wizarding 101</h5>
-        </a>
       </div>
       <div className="card-container d-flex mt-5">
-        <a
-          href="https://www.zbschools.sg/zbspro"
-          className="text-decoration-none"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <div className="card mx-4 border-0">
             <img src={zbspro} className="card-img" alt="zbschools-pro" />
             <div className="card-img-overlay card-text">
@@ -125,7 +105,6 @@ export default function Outreach() {
             </div>
           </div>
           <h5 className="card-title text-dark fs-3">ZBSchools PRO</h5>
-        </a>
       </div>
     </div>
   );
